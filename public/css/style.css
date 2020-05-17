@@ -19,5 +19,17 @@ body{
 #formulario-pergunta{
   margin-top: 5vh;
 }
+.estilo-btn2{
+  background: #263b5c;
+  outline: none;
+  border-color: #263b5c;
+  border-radius: 0;
+  transition: 0.5s;
+  color: white;
+}
+.estilo-btn2:hover{
+  background: none;
+  color: #263b5c;
+}
 
 
