@@ -12,10 +12,11 @@
       <br>
       <div class="card">
         <div class="card-body">
+          <div class="dataformatada"><%= pergunta.updatedAt %></div>
           <h3><%= pergunta.titulo %></h3>
         </div>
         <div class="card-footer">
-          <button class="btn estilo-btn">Responder</button>
+          <a href="/pergunta/<%= pergunta.id %>"><button class="btn estilo-btn">Responder</button></a>
         </div>
       </div>
       
@@ -24,4 +25,5 @@
   </div>
 
   </body>
+  
 <%- include('partials/footer.ejs') %>

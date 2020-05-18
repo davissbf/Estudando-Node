@@ -1,4 +1,18 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script>
+  var sd = document.getElementsByClassName("dataformatada");
+  for(var i = 0; i < sd.length; i++){
+    var element = sd[i]; var d = element.innerHTML;
+    var d = new Date(d); var options = { hour: 'numeric', minute: 'numeric' };
+    element.innerHTML = d.toLocaleDateString("pt-BR", options);
+  }
+  var sd2 = document.getElementsByClassName("dataformatada2");
+  for(var i2 = 0; i2 < sd.length; i2++){
+    var element2 = sd2[i2]; var d2 = element2.innerHTML;
+    var d2 = new Date(d2); var options2 = { hour: 'numeric', minute: 'numeric' };
+    element2.innerHTML = d2.toLocaleDateString("pt-BR", options2);
+  }
+</script>
 </html>
