@@ -26,7 +26,14 @@ app.use(bodyParser.json());
 app.get("/", (req, res)=>{
 
   //SELECT * FROM perguntas;
-  Pergunta.findAll({raw: true}).then(perguntas =>{
+  Pergunta.findAll({raw: true, order:[
+    ['id','DESC'] //ASC = Crescente || DESC = Decrecente
+    
+    /*
+      Pelo titulo
+      ['titulo', 'ASC']
+    */
+  ]}).then(perguntas =>{
     res.render("index", {
       perguntas: perguntas
     });
